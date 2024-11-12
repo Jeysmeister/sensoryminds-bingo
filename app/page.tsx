@@ -13,7 +13,7 @@ export default function Home() {
 
   const slideInVariant = {
     default: { x: 0, opacity: 1, width: "100%" },
-    invisible: { x: "100%", opacity: 0, width: 0 },
+    invisible: { x: "120%", opacity: 0, width: 0 },
     visible: { x: 0, opacity: 1, width: "100%", transition: { duration: 1, easeInOut } },
   };
 
@@ -32,7 +32,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div
-        className="w-screen h-screen flex justify-center items-center text-white bg-black flex-col gap-4 cursor-pointer px-4"
+        className={`w-screen h-screen flex justify-center items-center text-white bg-black flex-col gap-4 cursor-pointer ${activeSection === 1 ? "px-4" : "px-0"}`}
         onClick={() => setActiveSection(2)}
         initial="invisible"
         animate={activeSection === 1 ? "visible" : activeSection === 2 && "invisible"}
