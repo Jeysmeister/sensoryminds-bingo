@@ -28,7 +28,9 @@ export default function Home() {
       >
         <div className="text-xl font-bold">Welcome to</div>
         <div className="text-2xl xs:text-4xl font-bold">NEVER HAVE I BINGO</div>
-        <div className="text-sm">(Click to continue...)</div>
+        <div className="text-sm" onClick={() => setActiveSection(1)}>
+          (Click to continue...)
+        </div>
       </motion.div>
 
       <motion.div
@@ -48,7 +50,9 @@ export default function Home() {
           <div>6. All players must click the &quot;Next Round&quot; button on the top right of the page.</div>
           <div>7. Have Fun!</div>
         </div>
-        <div className="text-sm">(Click to continue...)</div>
+        <div className="text-sm" onClick={() => setActiveSection(2)}>
+          (Click to continue...)
+        </div>
       </motion.div>
 
       <motion.div
