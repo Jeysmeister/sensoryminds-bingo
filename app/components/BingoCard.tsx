@@ -50,7 +50,7 @@ const BingoCard = ({ questions }: { questions: string[] }) => {
         <div className="flex w-full justify-center items-center py-4 text-xl font-extrabold">NEVER HAVE I BINGO</div>
         <div className="max-w-[800px] max-h-[800px] w-screen grid grid-cols-5 gap-1 xs:gap-2 sm:gap-4">
           {grid.map((item, index) => (
-            <motion.div variants={child} className="flex justify-center">
+            <motion.div key={index} variants={child} className="flex justify-center">
               <BingoItem key={index} index={index} item={item} marked={marked} setMarked={setMarked} questions={questions} />
             </motion.div>
           ))}

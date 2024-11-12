@@ -7,7 +7,7 @@ const WinnerDialog = ({ open, setOpen, questions }: { open: boolean; setOpen: (v
         <DialogTitle>I HAVE ...</DialogTitle>
         <div className="flex flex-col gap-4">
           {questions.map((question: string, index: number) => {
-            return <div>{`${index + 1}. ${question}`}</div>;
+            return <div key={index}>{`${index + 1}. ${question}`}</div>;
           })}
         </div>
       </DialogContent>

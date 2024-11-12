@@ -1,11 +1,10 @@
 "use client";
 
-import { neverHaveIEverQuestions } from "@/data/questions";
+import { getRandomQuestions } from "@/functions/getRandomQuestions";
 import { easeInOut, motion } from "framer-motion";
 import { useState } from "react";
 import BingoCard from "./components/BingoCard";
 import Header from "./components/Header";
-import { getRandomQuestions } from "@/functions/getRandomQuestions";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
@@ -42,11 +41,11 @@ export default function Home() {
         <div className="text-xl sm:text-4xl font-extrabold">INSTRUCTIONS</div>
         <div className="flex flex-col text-xs sm:text-base font-bold text-left max-w-[800px] gap-2 ">
           <div>1. Players must decide on the consequence when a player loses (e.g. Drink a shot).</div>
-          <div>2. Players must click on the boxes of the events they've done or experienced.</div>
+          <div>2. Players must click on the boxes of the events they&apos;ve done or experienced.</div>
           <div>3. A player loses if they fill a row, column, or diagonal.</div>
           <div>4. All players who lost must do the consequence.</div>
-          <div>5. The losing players must tell the other players what the list of things they've experienced or have done.</div>
-          <div>6. All players must click the "Next Round" button on the top right of the page.</div>
+          <div>5. The losing players must tell the other players what the list of things they&apos;ve experienced or have done.</div>
+          <div>6. All players must click the &quot;Next Round&quot; button on the top right of the page.</div>
           <div>7. Have Fun!</div>
         </div>
         <div className="text-sm">(Click to continue...)</div>
