@@ -35,7 +35,7 @@ const BingoCard = ({ questions }: { questions: string[] }) => {
   const [tempPossibleWins, setTempPosibleWins] = useState(possibleWins);
   const checkForWin = (markedBoxes: number[]) => {
     return tempPossibleWins.some((combination, index) => {
-      let isWin = combination.every((index) => markedBoxes.includes(index));
+      const isWin = combination.every((index) => markedBoxes.includes(index));
       if (isWin) {
         setTempPosibleWins(tempPossibleWins.filter((_, idx) => idx !== index));
       }
